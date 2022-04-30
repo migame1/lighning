@@ -17,3 +17,4 @@ const db = firebase.firestore();
 
 // update firestore settings
 db.settings({ timestampsInSnapshots: true });
+

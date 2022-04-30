@@ -2,11 +2,50 @@
 <html>
 <head>
 <title>Page Title</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
+<!--
+
 <button onclick="document.location='Register.html'"> seller </button>
 <button onclick="document.location='buyer.html'"> buyer </button>
+
+-->
+
+<header>
+    <a class="logo" href="/"><img src="images/logo.svg" alt="logo"></a>
+    <nav>
+        <ul class="nav__links">
+            <li><a href="buyer.html">Buy</a></li>
+            <li><a href="Register.html">Join as a seller</a></li>
+            <li><a href="singin.html">Sign In</a></li>
+        </ul>
+    </nav>
+    <a class="cta" href="#">Contact</a>
+    <p class="menu cta">Menu</p>
+</header>
+<div class="overlay">
+    <a class="close">&times;</a>
+    <div class="overlay__content">
+        <a href="#">Services</a>
+        <a href="#">Projects</a>
+        <a href="#">About</a>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="buttons">
+        <a href="buyer.html" class="btn">want to buy?</a>
+        <a href="Register.html" class="btn">start to sell</a>
+    </div>
+</div>
+
 
 
 <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>

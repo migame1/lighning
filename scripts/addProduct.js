@@ -1,3 +1,9 @@
+auth.onAuthStateChanged(user => {
+  if(user == null){
+      document.location="index.html"
+  }
+})
+
 
 const addProductForm = document.getElementById("addProduct-form")
 

@@ -1,3 +1,7 @@
+if (auth.currentUser == null) {
+    document.location="index.html"
+  }
+
 let userID = null
 const productList = document.querySelector('#products-list')
 
@@ -16,6 +20,7 @@ function renderProducts(doc) {
     li.appendChild(name)
     li.appendChild(price)
     li.appendChild(cross)
+
 
     productList.appendChild(li)
 

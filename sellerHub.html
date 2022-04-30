@@ -2,18 +2,50 @@
 <html>
 <head>
 <title>Page Title</title>
+<link rel="stylesheet" href="css/sellerHub.css">
 </head>
 <body>
 
+    <header>
+        <a class="logo" href="/"><img src="images/logo.svg" alt="logo"></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="buyer.html">Buy</a></li>
+                <li><a href="Register.html">Join as a seller</a></li>
+                <li><a href="singin.html">Sign In</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="#">Contact</a>
+        <p class="menu cta">Menu</p>
+    </header>
+    <div class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a href="#">About</a>
+        </div>
+    </div>
 
-<button onclick="document.location='myProducts.html'">My products</button>
-<button onclick="document.location='addProduct.html'">Add product</button>
+<div class="container">
+    <div class="buttons">
+        <a href="myProducts.html" target="_blank" class="btn">My products</a>
+        <a href="addProduct.html" class="btn">Add product</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="buttons sign-out">
+        <a href="#" class="btn" id="sign-out">sign out</a>
+    </div>
+</div>
 
 
 <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
 <script src="scripts/firebase.js"></script>
+<script src="scripts/sellerHub.js"></script>
 
 </body>
 </html>
