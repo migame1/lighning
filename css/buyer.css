@@ -130,3 +130,52 @@ button{
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+/*ditaile window*/
+
+
+
+
+
+#product-window li span:nth-child(2){
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+#product-window .container li {
+
+  background: #ffffff;
+  border-bottom: 0px;
+  list-style-type: none;
+
+}
+
+#product-window .container h2 {
+
+  position: relative;
+  text-align: center;
+  font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+
+}
+
+#product-window .container span {
+  font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+}
+
+#product-window.container li.descreptionSpacer {
+  margin: 20px;
+}
+
+
+#product-window .container p {
+  
+  font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  
+
+
+
+}
+
+
+/*end ditaile window*/

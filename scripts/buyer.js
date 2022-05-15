@@ -8,31 +8,39 @@ const popWindowWright = document.querySelector('.container')
 function renderDeitalis(doc) {
   
   let li = document.createElement('li')
-  let name = document.createElement('span')
+  let name = document.createElement('h2')
   let price = document.createElement('span')
-  let descreption = document.createElement('span')
   let categorie = document.createElement('span')
   let subCategorie = document.createElement('span')
   let link = document.createElement('span')
   let cross = document.createElement('div')
+  let descreption = document.createElement('p')
+  let descreptionSpacer = document.createElement("span")
+
 
 
   name.textContent = doc.data().name
-  price.textContent = doc.data().price + "$"
+  price.textContent = "price - " + doc.data().price + "$"
   descreption.textContent = doc.data().descreption
-  categorie.textContent = doc.data().categorie
+  descreptionSpacer.textContent = "descreption:"
+  //categorie.textContent = doc.data().categorie
   subCategorie.textContent = doc.data().subCategorie
-  link.textContent = doc.data().link
+  link.textContent = "email to contact - " + doc.data().link
   cross.textContent = "x"
+  
 
+  name.setAttribute("class", "title")
+  descreptionSpacer.setAttribute("class", "descreptionSpacer")
 
   li.appendChild(name)
   li.appendChild(price)
-  li.appendChild(descreption)
-  li.appendChild(categorie)
+  //li.appendChild(categorie)
   li.appendChild(subCategorie)
   li.appendChild(link)
   li.appendChild(cross)
+  li.appendChild(descreptionSpacer)
+  li.appendChild(descreption)
+
 
 
   popWindowWright.appendChild(li)

@@ -1,6 +1,9 @@
-if (auth.currentUser == null) {
-    document.location="index.html"
-  }
+auth.onAuthStateChanged(user => {
+    if(user == null){
+        document.location="index.html"
+    }
+  })
+  
 
 let userID = null
 const productList = document.querySelector('#products-list')
@@ -13,7 +16,7 @@ function renderProducts(doc) {
 
     li.setAttribute('data-id', doc.id)
     name.textContent = doc.data().name
-    price.textContent = doc.data().price
+    price.textContent = doc.data().price + "$"
     cross.textContent = "x"
 
 
