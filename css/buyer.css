@@ -1,5 +1,6 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
+  
 }
 
 .want-to-sell{
@@ -8,6 +9,17 @@
   left: 50%;
   transform: translate(-50%, 0);
 }
+.want-to-sell a{
+  text-decoration: none;
+
+}
+
+.want-to-sell a:hover {
+  text-decoration: underline;
+}
+
+
+
 
 body{
   background: #04AA6D;
@@ -179,3 +191,5 @@ button{
 
 
 /*end ditaile window*/
+
+

@@ -1,8 +1,16 @@
 auth.onAuthStateChanged(user => {
   if(user == null){
-      document.location="index.html"
+      alert("please log in first")
+      document.location="register.html"
   }
 })
+
+
+
+
+
+
+
 
 
 const addProductForm = document.getElementById("addProduct-form")
@@ -12,11 +20,14 @@ addProductForm.addEventListener("submit", e => {
 
     const name = document.getElementById("name").value
     const price = document.getElementById("price").value
-    const link = document.getElementById("link").value
+    //const link = document.getElementById("link").value
+    const email = auth.currentUser.email
+    
+
     const descreption = document.getElementById("the-textarea").value
     const subCategorie = document.getElementById("categorie").value
     let categorie = ""
-    if (subCategorie == "for-the-kitchen" || subCategorie == "cleaning" || subCategorie == "tv games" || subCategorie == "viewing and audio systems" || subCategorie == "heating and cooling the house" || subCategorie == "care and health devices" || subCategorie == "communication" || subCategorie == "office equipment" || subCategorie == "car stereo" || subCategorie == "photography" || subCategorie == "miscellaneous") {
+    if (subCategorie == "for the kitchen" || subCategorie == "cleaning" || subCategorie == "tv games" || subCategorie == "viewing and audio systems" || subCategorie == "heating and cooling the house" || subCategorie == "care and health devices" || subCategorie == "communication" || subCategorie == "office equipment" || subCategorie == "car stereo" || subCategorie == "photography" || subCategorie == "miscellaneous") {
       categorie = "Electronics"
     }
     db.collection("shops").get()
@@ -27,15 +38,18 @@ addProductForm.addEventListener("submit", e => {
              db.collection("products").add({
               name: name,
               price: price,
-              link: link,
+              //link: link,
+              email: email,
               descreption: descreption,
               shopID: doc.id,
               categorie: categorie,
               subCategorie: subCategorie
           })
           .then(() => {
+            /**
             var file = new Blob(["text"], {"text/plain": "text/plain"});
             URL.createObjectURL(file);
+            **/
             document.location="sellerHub.html"
           })
           }

@@ -12,11 +12,14 @@ function renderDeitalis(doc) {
   let price = document.createElement('span')
   let categorie = document.createElement('span')
   let subCategorie = document.createElement('span')
-  let link = document.createElement('span')
+  let email = document.createElement('span')
   let cross = document.createElement('div')
   let descreption = document.createElement('p')
   let descreptionSpacer = document.createElement("span")
 
+
+  subCategorieText = doc.data().subCategorie
+  subCategorieText = subCategorieText.replaceAll('-', ' ')
 
 
   name.textContent = doc.data().name
@@ -24,8 +27,8 @@ function renderDeitalis(doc) {
   descreption.textContent = doc.data().descreption
   descreptionSpacer.textContent = "descreption:"
   //categorie.textContent = doc.data().categorie
-  subCategorie.textContent = doc.data().subCategorie
-  link.textContent = "email to contact - " + doc.data().link
+  subCategorie.textContent = subCategorieText
+  email.textContent = "email to contact - " + doc.data().email
   cross.textContent = "x"
   
 
@@ -36,7 +39,7 @@ function renderDeitalis(doc) {
   li.appendChild(price)
   //li.appendChild(categorie)
   li.appendChild(subCategorie)
-  li.appendChild(link)
+  li.appendChild(email)
   li.appendChild(cross)
   li.appendChild(descreptionSpacer)
   li.appendChild(descreption)

@@ -65,6 +65,11 @@ li div{
     padding: 10px 0;
     font-weight:  bold;
     cursor:  pointer;
+    display: none;
+}
+
+li:hover div{
+    display: block;
 }
 
 form input{

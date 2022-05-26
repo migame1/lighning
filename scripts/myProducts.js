@@ -1,6 +1,6 @@
 auth.onAuthStateChanged(user => {
     if(user == null){
-        document.location="index.html"
+        document.location="register.html"
     }
   })
   
@@ -31,7 +31,10 @@ function renderProducts(doc) {
     cross.addEventListener('click', (e) => {
         e.preventDefault()
         let id = e.target.parentElement.getAttribute('data-id')
-        db.collection("products").doc(id).delete()
+        if (confirm("are you sure you want to delete the product?")){
+            db.collection("products").doc(id).delete()
+        }
+        
     })
 
 }

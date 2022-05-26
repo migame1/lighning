@@ -1,6 +1,6 @@
 auth.onAuthStateChanged(user => {
     if(user == null){
-        document.location="index.html"
+        document.location="register.html"
     }
 })
 
