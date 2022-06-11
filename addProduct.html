@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css/addProduct.css"> 
+    <link rel="stylesheet" href="{{url_for('static', filename='style/addProduct.css')}}"> 
 <title>Page Title</title>
 </head>
 <body>
@@ -17,10 +17,7 @@
       
           <label for="price"><b>Price</b></label>
           <input type="text" placeholder="Enter Price" name="price" id="price" required>
-          <!--
-          <label for="link"><b>link</b></label>
-          <input type="text"  placeholder="Repeat Link" name="link" id="link" required>
-          -->
+
 
           <label for="descreption"><b>descreption</b></label>
 
@@ -73,8 +70,8 @@
 <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
-<script src="scripts/firebase.js"></script>
-<script src="scripts/addProduct.js"></script>
+<script src="{{url_for('static', filename='scripts/firebase.js')}}"></script>
+<script src="{{url_for('static', filename='scripts/addProduct.js')}}"></script>
 
 </body>
 </html>
